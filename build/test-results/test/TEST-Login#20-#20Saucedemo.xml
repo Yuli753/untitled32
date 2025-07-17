@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login - Saucedemo" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-17T13:42:19" hostname="DESKTOP-8ACA4EI" time="82.039">
+<testsuite name="Login - Saucedemo" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-17T13:57:16" hostname="DESKTOP-8ACA4EI" time="95.081">
   <properties/>
-  <testcase name="Successful login" classname="Login - Saucedemo" time="82.039"/>
+  <testcase name="Successful login" classname="Login - Saucedemo" time="95.081"/>
   <system-out><![CDATA[
 Scenario: Successful login              # src/test/resources/features/login.feature:3
   Given I open the login page           # stepdefinitions.LoginSteps.openLoginPage()
@@ -10,9 +10,9 @@ Scenario: Successful login              # src/test/resources/features/login.feat
   And I click the login button          # stepdefinitions.LoginSteps.clickLoginButton()
   Then I should see the products page   # stepdefinitions.LoginSteps.verifyProductsPage()
 ]]></system-out>
-  <system-err><![CDATA[Jul 17, 2025 8:42:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[Jul 17, 2025 8:57:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 17, 2025 8:42:53 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 17, 2025 8:57:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.157. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
