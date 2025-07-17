@@ -1,0 +1,35 @@
+name: Web UI Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-web-ui:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Chrome for Selenium
+        uses: browser-actions/setup-chrome@v1
+
+      - run: chmod +x ./gradlew
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Show report files
+        run: ls -R build/reports
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-web-reports
+          path: build/reports
